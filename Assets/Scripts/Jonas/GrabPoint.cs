@@ -12,13 +12,14 @@ public class GrabPoint : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         myLine.GetComponent<LineRenderer>();
+        myLine.SetPosition(1, transform.position);
         myLine.SetPosition(0, player.transform.position);
-        myLine.SetPosition(1, MousePos.mousePos);
     }
 
     // Update is called once per frame
     void Update()
     {
         myLine.SetPosition(0, player.transform.position);
+        myLine.SetPosition(1, transform.position);
     }
 }
