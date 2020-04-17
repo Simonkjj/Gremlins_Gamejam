@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour
     private bool isRunning = false;
     [SerializeField]
     private bool isGrounded = false;
-    private bool canSlide = false;
+
 
 
     private Rigidbody2D rb;
@@ -32,7 +32,8 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-	}
+        Run();
+    }
 
     void Update()
     {
